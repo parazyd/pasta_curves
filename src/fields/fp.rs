@@ -28,6 +28,7 @@ use crate::arithmetic::SqrtTables;
 #[derive(Clone, Copy, Eq)]
 #[cfg(feature = "borsh")]
 #[derive(borsh::BorshSerialize, borsh::BorshDeserialize)]
+#[repr(transparent)]
 pub struct Fp(pub(crate) [u64; 4]);
 
 impl fmt::Debug for Fp {
